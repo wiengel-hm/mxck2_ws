@@ -10,11 +10,17 @@ x-common-setup: &common-setup
     - /home/mxck/development_ws:/mxck2_ws
     - /dev:/dev
   stdin_open: true
+  # Modern GPU-Configuration for Docker Compose
+  deploy:
+    resources:
+      reservations:
+        devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu, compute, utility]
 
 services:
   development:
     <<: *common-setup
     container_name: mxck2_development
     command: bash
-
-    
