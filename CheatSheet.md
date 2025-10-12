@@ -103,6 +103,14 @@ ssh-add ~/.ssh/github_key
 
 * **Example Explanation:** This command adds the private key located at `~/.ssh/github_key` to the running agent. If this key is protected by a passphrase, `ssh-add` will ask you for it *once*. After the key is added, the agent can provide it automatically when you SSH to hosts that accept the corresponding public key (like GitHub, or your Jetsons if configured), eliminating the need to re-enter the passphrase for that session. You can run `ssh-add` for multiple keys.
 
+##### Test the GitHub SSH Key
+
+Verify that your SSH key works with GitHub:
+
+```bash
+ssh -T git@github.com
+```
+
 ---
 
 ### 4. Process Management
