@@ -31,7 +31,7 @@ rc_to_joy:
     # move all joysticks on the remote control and watch the pwm values 
     # ros topic echo /veh_remote_control
     steering_min_pwm: 1000
-    steering_mid_pwm: 1500
+    steering_mid_pwm: 1485
     steering_max_pwm: 2000
 
     speed_min_pwm: 1000
@@ -51,7 +51,7 @@ joy_to_ackermann:
     steering_angle_max: 0.44  # Maximum steering angle in radians (+/-)
 
     max_backward_speed: -2.0  # Minimum speed, represents maximum reverse speed in m/s
-    max_forward_speed: 2.0   # Maximum speed, represents maximum forward speed in m/s
+    max_forward_speed: 1.5   # Maximum speed, represents maximum forward speed in m/s
 
     joy_deadzone: 0.07
 
@@ -63,7 +63,7 @@ ackermann_to_vesc:
     # 0 is steering completely to the left, and 1 is steering completely to the right
     servo_max: 0.9    # Max servo position, prevents steering block by not going fully right
     servo_min: 0.1    # Min servo position, prevents steering block by not going fully left
-    servo_mid: 0.443  # Mid servo position, represents neutral steering position
+    servo_mid: 0.5  # Mid servo position, represents neutral steering position
 
     # VESC braking current in Ampere
     brake_amps: -20.0
@@ -82,4 +82,4 @@ ackermann_to_vesc:
     joy_manu_value: 1  # Drive manually
     joy_auto_value: 2  # Drive autonomously (not enabled in joy mode)
 
-    invert_steering: true
+    invert_steering: false
