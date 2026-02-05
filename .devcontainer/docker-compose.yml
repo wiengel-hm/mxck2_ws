@@ -5,7 +5,7 @@ x-common-setup: &common-setup
     context: ..
     dockerfile: Dockerfile
   privileged: true
-  network_mode: mxck0021-net
+  network_mode: mxck0017-net
   volumes:
     - /home/mxck/mxck2_ws:/mxck2_ws
     - /dev:/dev
