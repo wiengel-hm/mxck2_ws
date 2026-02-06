@@ -1,8 +1,10 @@
 FROM mxwilliam/mxck:mxck-humble-ubuntu-22.04
 
-# Upgrade pip and install Python packages
-# RUN python3 -m pip install \
-# ...
+# Completely clean and reconfigure ROS repository
+RUN rm -f /etc/apt/sources.list.d/ros2*.list \
+&& rm -f /usr/share/keyrings/ros* \
+&& curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 # Update system and install ROS packages for video/image extraction
 RUN apt update \
