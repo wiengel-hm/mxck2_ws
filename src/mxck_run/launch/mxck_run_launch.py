@@ -125,7 +125,7 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration("run_lidar")),
         actions=[
             IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([lidar_pkg, "/launch/rplidar_a2m12_launch.py"])
+                PythonLaunchDescriptionSource([lidar_pkg, "/launch/rplidar_a2m8_launch.py"])
             )
         ]
     )
