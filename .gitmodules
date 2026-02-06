@@ -1,9 +1,12 @@
 [submodule "src/pdc_visualization"]
 	path = src/pdc_visualization
 	url = https://github.com/william-mx/pdc_visualization.git
+	branch = main
 [submodule "src/drive_manager"]
 	path = src/drive_manager
 	url = git@github.com:wiengel-hm/drive_manager.git
+	branch = main
 [submodule "src/yolo_vision"]
 	path = src/yolo_vision
 	url = https://github.com/william-mx/yolo_vision.git
+	branch = main
