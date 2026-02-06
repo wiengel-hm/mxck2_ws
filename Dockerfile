@@ -4,10 +4,12 @@ FROM mxwilliam/mxck:mxck-humble-ubuntu-22.04
 # RUN python3 -m pip install \
 # ...
 
-# Update system and install ROS packages
-# RUN apt update \
-# && apt install --yes \
-# ...
+# Update system and install ROS packages for video/image extraction
+RUN apt update \
+&& apt install --yes --no-install-recommends \
+    ros-$ROS_DISTRO-image-view \
+    ros-$ROS_DISTRO-image-transport \
+&& rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install --no-cache-dir \
     git+https://github.com/william-mx/ros2_numpy.git
