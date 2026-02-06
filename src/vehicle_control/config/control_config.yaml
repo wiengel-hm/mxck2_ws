@@ -82,4 +82,4 @@ ackermann_to_vesc:
     joy_manu_value: 1  # Drive manually
     joy_auto_value: 2  # Drive autonomously (not enabled in joy mode)
 
-    invert_steering: true
+    invert_steering: false
