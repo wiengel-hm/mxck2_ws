@@ -2,7 +2,7 @@
 
 Clone this repository.
 ```
-git clone --recurse-submodules -b development_ws https://github.com/william-mx/mxck2_ws.git ~/development_ws
+git clone --recurse-submodules -b development_ws git@github.com:wiengel-hm/mxck2_ws.git ~/development_ws
 ```
 
 ## Choosing the Right CUDA Docker on Jetson (L4T)
