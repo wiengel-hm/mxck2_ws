@@ -5,7 +5,7 @@
 
 Clone this repository.
 ```
-git clone -b main https://github.com/william-mx/mxck2_ws.git ~/mxck2_ws
+git clone -b main git@github.com:wiengel-hm/mxck2_ws.git ~/mxck2_ws
 ```
 
 Make shell scripts and python files executable.
