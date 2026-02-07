@@ -6,13 +6,13 @@ from launch.actions import DeclareLaunchArgument, ExecuteProcess
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 
 # Example Usage
-# ros2 launch mxck_run record_launch.py filename:=custom_bag format:=sqlite3
+# ros2 launch mxck_run record_launch.py filename:=traffic format:=mcap
 
 # List of topics to record
 topics = [
     "/rc/ackermann_cmd",
-    "/camera/imu",
-    "/imu"
+    "/camera/camera/color/image_raw",
+    "/camera/camera/imu"
 ]
 
 # Short lists of adjectives and animals for naming

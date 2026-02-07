@@ -48,3 +48,8 @@ services:
     <<: *common-setup
     container_name: mxck2_imu
     command: bash -i -c "run_imu"
+
+  record:
+    <<: *common-setup
+    container_name: mxck2_record
+    command: bash -i -c "record_mcap"
